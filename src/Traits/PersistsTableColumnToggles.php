@@ -8,7 +8,7 @@ trait PersistsTableColumnToggles
 {
     public function updated(string $name, $value): void
     {
-        \Log::info('Updated field: ' . $name . ', New value: ' . $value);
+        // \Log::info('Updated field: ' . $name . ', New value: ' . $value);
         
         if (str_starts_with($name, 'toggledTableColumns.')) {
             $this->persistColumnToggles();
