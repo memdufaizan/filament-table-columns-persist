@@ -5,16 +5,16 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Memdufaizan\\\\FilamentTableColumnsPersist\\\\": "src/"
+      "Memdufaizan\\FilamentTableColumnsPersist\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Memdufaizan\\\\FilamentTableColumnsPersist\\\\ColumnPrefsServiceProvider"
+        "Memdufaizan\\FilamentTableColumnsPersist\\ColumnPrefsServiceProvider"
       ],
       "aliases": {
-        "ColumnPrefs": "Memdufaizan\\\\FilamentTableColumnsPersist\\\\Facades\\\\ColumnPrefs"
+        "ColumnPrefs": "Memdufaizan\\FilamentTableColumnsPersist\\Facades\\ColumnPrefs"
       }
     }
   },
