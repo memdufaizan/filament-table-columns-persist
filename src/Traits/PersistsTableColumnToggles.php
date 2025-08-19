@@ -6,6 +6,15 @@ use Memdufaizan\FilamentTableColumnsPersist\Facades\ColumnPrefs;
 
 trait PersistsTableColumnToggles
 {
+    public function updated(string $name, $value): void
+    {
+        \Log::info('Updated field: ' . $name . ', New value: ' . $value);
+        
+        if (str_starts_with($name, 'toggledTableColumns.')) {
+            $this->persistColumnToggles();
+        }
+    }
+
     protected function persistColumnToggles(): void
     {
         ColumnPrefs::save($this->getTablePersistenceKey(), $this->toggledTableColumns ?? []);
